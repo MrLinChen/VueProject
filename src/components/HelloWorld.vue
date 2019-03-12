@@ -80,6 +80,7 @@
         </a>
       </li>
     </ul>
+    <div @click="href">用户信息</div>
   </div>
 </template>
 
@@ -89,6 +90,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    href () {
+      this.$router.push({name: 'user', params: {id: '123456'}})
     }
   }
 }
